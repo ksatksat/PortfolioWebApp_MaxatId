@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== Header ========== -->
+    <header>
+        <div class="logo">Иванов Дмитрий</div>
+        <!-- Dark/Light mode toggle button (added) -->
+        <button id="theme-toggle" class="theme-toggle-btn">Dark Mode</button> <!-- Added: toggle button -->
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Мои навыки</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#videos">Видео</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== Image Block ========== -->
+    <div class="image-block">
+        <img src="img/xyz3_pzoi_211008.jpg" alt="Описание изображения">
+    </div>
+
+    <!-- ========== "Обо мне" Section ========== -->
+    <section class="about" id="about">
+        <h2>Обо мне</h2>
+        <p>
+            Создаю игры на Scratch, игры собранные из блоков. Также создаю игры в Roblox studio,
+            на языке lua. Также создаю игры используя Unity Engine на языке C#. Создаю сайты с
+            помощью HTML, CSS, JavaScript. В данный момент учу технологию ASP.NET для веб разработки.
+        </p>
+        <button class="contact-btn">Связаться</button>
+    </section>
+
+    <!-- ========== "Мои навыки" Section ========== -->
+    <section class="skills" id="skills">
+        <h2>Мои навыки</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Unity C#</li>
+            <li>Roblox Lua</li>
+        </ul>
+    </section>
+
+    <!-- ========== "Портфолио" Section ========== -->
+    <section class="portfolio" id="portfolio">
+        <h2>Портфолио</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="img/NewPanzerGameWallpaper.png" alt="Проект 1">
+                <h3>Игры в жанре Гонки</h3>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/runner.jpg" alt="Проект 2">
+                <h3>Игры в жанре Раннер</h3>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/playerWins.png" alt="Проект 3">
+                <h3>Игры в жанре Файтинг</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Video Section ========== -->
+    <section class="videos" id="videos">
+        <h2>Видео о моих играх</h2>
+        <div class="video-container">
+            <!-- Video 1 -->
+            <iframe width="997" height="561" src="https://www.youtube.com/embed/65DxuuSPY0o"
+                title="Стратегии на Playstation 1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- Video 2 -->
+            <iframe width="997" height="561" src="https://www.youtube.com/embed/rndyV_MKTBg"
+                title="Шутеры на Playstation 1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- Video 3 -->
+            <iframe width="997" height="561" src="https://www.youtube.com/embed/nixuLZvsiWA"
+                title="Как ломали PlayStation" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- ========== "Контакты" Section ========== -->
+    <section class="contacts" id="contacts">
+        <h2>Контакты</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <!-- ========== Footer Section with Embedded Map and Social Links ========== -->
+    <footer>
+        <div class="footer-content">
+            <h3>Местоположение</h3>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.2581441938846!2d74.61186011534922!3d42.87630127915056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec60df4aa07b7%3A0x97b7a7f1d6a5e0!2z0JjQvdC70Y_RgtGA0L7QstCwLCDQmtC-0YDRg9C70YzQvdC40Lwg0JfQsNC90LDRgdC-0LPQsA!5e0!3m2!1sru!2skg!4v1681290000000!5m2!1sru!2skg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark/Light Mode Toggle Script (added) -->
+    <script>
+        // Select the toggle button and the body
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Function to switch themes
+        function toggleTheme() {
+            body.classList.toggle('dark-mode'); // Added dark-mode class to body
+            // Update the button text based on active theme
+            if (body.classList.contains('dark-mode')) {
+                themeToggleBtn.textContent = "Light Mode"; // Button text for dark mode
+            } else {
+                themeToggleBtn.textContent = "Dark Mode"; // Button text for light mode
+            }
+        }
+
+        // Listen for button clicks and call toggleTheme function
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    </script>
+</body>
+
+</html>
+
+
+
+/* ========== Global Styles ========== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/*конменнтарии в CSS*/
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #f4a261;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ========== Image Block Styles ========== */
+.image-block {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.image-block img {
+    width: 60%;
+    /* 60% width of the screen */
+    height: 200px;
+    /* Height set to 200px */
+    object-fit: cover;
+    border-radius: 10px;
+    /* Rounded corners for the image */
+}
+
+/* ========== "Обо мне" Section Styles ========== */
+.about {
+    width: 60%;
+    /* Same width as the image block */
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.contact-btn {
+    background-color: #3090ff;
+    /* Valid hex color code */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    /* Same rounding as the image */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #2070e0;
+    /* Hover color */
+}
+
+/* ========== "Мои навыки" Section Styles ========== */
+.skills {
+    width: 60%;
+    /* Same width as above */
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills ul li {
+    background-color: #797979;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ========== "Портфолио" Section Styles ========== */
+.portfolio {
+    width: 60%;
+    /* Same width as above */
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 20px;
+    margin: 10px 0 0;
+}
+
+/* ========== Video Section Styles ========== */
+.videos {
+    width: 60%;
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.videos h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container for the videos arranged in one row */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Styling for each embedded video */
+.video-container iframe {
+    flex: 1 1 30%;
+    /* Grows and shrinks, base width ~30% */
+    min-width: 250px;
+    /* Ensures the iframe doesn't get too narrow */
+    height: 200px;
+    /* Adjust the height as needed to maintain aspect ratio */
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ========== "Контакты" Section Styles ========== */
+.contacts {
+    width: 60%;
+    /* Same width as above */
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #3090ff;
+    /* Valid hex color code for the button */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    /* Same rounding as the image */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #2070e0;
+    /* Hover color */
+}
+
+
+/* ========== Footer Styles ========== */
+footer {
+    background-color: #3d3d3d;
+    padding: 20px 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e1e1e1;
+}
+
+/* Map container to restrict size and add responsiveness */
+.map-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ========== Footer Styles (continued) for social links ========== */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #cbcbcb;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #3090ff;
+}
+
+/* ===== Dark/Light Mode Toggle Button Styles (added) ===== */
+.theme-toggle-btn {
+    position: absolute;
+    /* Position in the header */
+    top: 20px;
+    /* Adjust as needed */
+    right: 60px;
+    /* Adjust to not overlap with navigation */
+    padding: 8px 16px;
+    background-color: #3090ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #2070e0;
+}
+
+/* ===== Dark Mode Styles  ===== */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .logo,
+body.dark-mode nav ul li a,
+body.dark-mode .about h2,
+body.dark-mode .skills h2,
+body.dark-mode .portfolio h2,
+body.dark-mode .videos h2,
+body.dark-mode .contacts h2,
+body.dark-mode footer .footer-content h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+    background: #f4a261;
+    color: #121212;
+}
+
+body.dark-mode .contact-btn {
+    background-color: #2070e0;
+}
+
+body.dark-mode .contact-btn:hover {
+    background-color: #3090ff;
+}

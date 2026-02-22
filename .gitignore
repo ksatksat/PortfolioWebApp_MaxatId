@@ -1,0 +1,29 @@
+# --- Frontend (HTML, CSS, JS) ---
+node_modules/
+.npm/
+dist/
+build/
+.cache/
+*.log
+
+# --- ASP.NET Core & .NET ---
+[Bb]in/
+[Oo]bj/
+appsettings.Development.json
+*.user
+*.suo
+*.sln.docstates
+.vs/
+.vscode/
+
+# --- SQLite Databases ---
+# We ignore the database itself but keep the folder structure if needed
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db

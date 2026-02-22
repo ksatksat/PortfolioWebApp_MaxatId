@@ -1,0 +1,74 @@
+EXAMPLE:
+
+
+
+=========================> D:\CODDY\FRONTEND>mkdir portfolio_onlyFrontend
+
+=========================> D:\CODDY\FRONTEND>cd portfolio_onlyFrontend
+
+=========================> D:\CODDY\FRONTEND\portfolio_onlyFrontend>git init
+Initialized empty Git repository in D:/CODDY/FRONTEND/portfolio_onlyFrontend/.git/
+
+=========================> D:\CODDY\FRONTEND\portfolio_onlyFrontend>git remote add origin https://github.com/ksatksat/PortfolioApp.git
+
+
+
+=========================> D:\CODDY\FRONTEND\portfolio_onlyFrontend>git fetch --depth=1 origin 0a423a59244ed6ec7e8103379f2efa0fe3eea799
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 21 (delta 2), reused 16 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (21/21), 12.31 MiB | 1.44 MiB/s, done.
+From https://github.com/ksatksat/PortfolioApp
+ * branch            0a423a59244ed6ec7e8103379f2efa0fe3eea799 -> FETCH_HEAD
+
+D:\CODDY\FRONTEND\portfolio_onlyFrontend>dir
+ Volume in drive D is Data
+ Volume Serial Number is 38AD-4BAB
+
+ Directory of D:\CODDY\FRONTEND\portfolio_onlyFrontend
+
+07/25/2025  09:46 AM    <DIR>          .
+07/25/2025  09:46 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)   6,052,687,872 bytes free
+
+=========================> D:\CODDY\FRONTEND\portfolio_onlyFrontend>git checkout FETCH_HEAD
+Note: switching to 'FETCH_HEAD'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 0a423a5 Add embeded webGL game to html
+
+D:\CODDY\FRONTEND\portfolio_onlyFrontend>dir
+ Volume in drive D is Data
+ Volume Serial Number is 38AD-4BAB
+
+ Directory of D:\CODDY\FRONTEND\portfolio_onlyFrontend
+
+07/25/2025  10:06 AM    <DIR>          .
+07/25/2025  10:06 AM    <DIR>          ..
+07/25/2025  10:06 AM               101 .gitignore
+07/25/2025  10:06 AM             8,554 app.js
+07/25/2025  10:06 AM             4,452 data.json
+07/25/2025  10:06 AM    <DIR>          img
+07/25/2025  10:06 AM             8,716 index.html
+07/25/2025  10:06 AM            14,150 oldVersion.txt
+07/25/2025  10:06 AM             7,040 style.css
+               6 File(s)         43,013 bytes
+               3 Dir(s)   6,037,151,744 bytes free
+
+D:\CODDY\FRONTEND\portfolio_onlyFrontend>

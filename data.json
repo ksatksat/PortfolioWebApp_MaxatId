@@ -1,0 +1,95 @@
+{
+    "english":{
+        "logo": "Dmitriy Ivanov \u00AE",
+        "aboutMe_li_": "About me",
+        "skills_li_": "My skills",
+        "portfolio_li_": "Portfolio",
+        "videos_li_": "Video",
+        "contacts_li_": "Contacts",
+
+        "theme_toggle_light": "Light mode",
+        "theme_toggle_dark": "Dark mode",
+
+        "aboutH2_": "About",
+        "aboutP_": "I create games on Scratch, games assembled from blocks. I also create games in the Roblox studio, in the Lua language. I also create a games using the Unity Engine and C#. I create websites with using HTML, CSS, JavaScript. At the moment I am teaching how to use ASP.NET for web development.",
+        "aboutCBtn_": "Contact me",
+
+        "skillsH2_": "My skills",
+
+        "portfolioH2_": "Portfolio",
+        "portfolioH3_1_": "Racing game",
+        "portfolioH3_2_": "Runner game",
+        "portfolioH3_3_": "Fighting game",
+
+        "videosH2_": "Video about my games",
+
+        "contactsH2_": "Contacts",
+        "contactsBtn_": "Send",
+
+        "locationH3_": "Location",
+
+        "aboutWebsite_": "Dmitriy Ivanov. Made on Unity courses 13.4.2025\u00A9"
+    },
+    "kyrgyz":{
+        "logo":"Дмитрийбек Ивановбай \u00AE",
+        "aboutMe_li_": "Мен жөнүндө",
+        "skills_li_": "Менин чеберчилигим",
+        "portfolio_li_": "Портфолио",
+        "videos_li_": "Видеолор",
+        "contacts_li_": "Байланыштар",
+
+        "theme_toggle_light": "Жарык",
+        "theme_toggle_dark": "Караңгы",
+
+        "aboutH2_": "Мен жөнүндө",
+        "aboutP_": "Мен Scratch'те оюндарды, блоктордон чогултулган оюндарды түзөм. Мен ошондой эле Roblox студиясында Lua тилинде оюндарды түзөм. Ошондой эле C# тилинде Unity Engine аркылуу оюндарды түзөм. Мен HTML, CSS, JavaScript аркылуу веб-сайттарды түзөм. Учурда веб-иштеп чыгуу үчүн ASP.NETти кантип колдонууну үйрөнүүдө.",
+        "aboutCBtn_": "Мени менен байланыш",
+
+        "skillsH2_": "Менин чеберчилигим",
+
+        "portfolioH2_": "Портфолио",
+        "portfolioH3_1_": "Жарыш оюну",
+        "portfolioH3_2_": "Жүгүрүү оюну",
+        "portfolioH3_3_": "Уруш оюну",
+
+        "videosH2_": "Менин оюндарым жөнүндө видео",
+
+        "contactsH2_": "Байланыштар",
+        "contactsBtn_": "Жөнөтүү",
+
+        "locationH3_": "Жайгашкан жери",
+
+        "aboutWebsite_": "Дмитрий Иванов. Ушул вебсайт Unity курста жасалган 13.4.2025\u00A9"
+    },
+    "russian":{
+        "logo":"Дмитрий Иванов \u00AE",
+        "aboutMe_li_": "Обо мне",
+        "skills_li_": "Мои навыки",
+        "portfolio_li_": "Портфолио",
+        "videos_li_": "Видео",
+        "contacts_li_": "Контакты",
+
+        "theme_toggle_light": "Светлый",
+        "theme_toggle_dark": "Темный",
+
+        "aboutH2_": "Обо мне",
+        "aboutP_": "Создаю игры на Scratch, игры собранные из блоков. Также создаю игры в студии Roblox,на языке Луа. Также создаю игры с помощью Unity Engine на C#. Создаю сайты с помощью HTML, CSS, JavaScript. В настоящий момент учу использовать ASP.NET для веб-разработки.",
+        "aboutCBtn_": "Связаться со мной",
+
+        "skillsH2_": "Мои навыки",
+
+        "portfolioH2_": "Портфолио",
+        "portfolioH3_1_": "Гоночная игра",
+        "portfolioH3_2_": "Ранер игра",
+        "portfolioH3_3_": "Игра в жанре файтинг",
+
+        "videosH2_": "Видео о моих играх",
+
+        "contactsH2_": "Контакты",
+        "contactsBtn_": "Отправить",
+
+        "locationH3_": "Местоположение",
+
+        "aboutWebsite_": "Иванов Дмитрий. Создано на курсах по Юнити и разработке игр 13.4.2025\u00A9"
+    }
+}

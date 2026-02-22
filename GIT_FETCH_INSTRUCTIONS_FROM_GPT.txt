@@ -1,0 +1,80 @@
+Here are two easy ways to grab an earlier commit from a remote GitHub repo into a fresh folder — one using Git itself, and one using GitHub’s “download ZIP” feature.
+
+Method 1: Using Git (no full clone)
+Pick a new folder and initialize
+
+bash
+Copy
+Edit
+mkdir my-old-commit
+cd my-old-commit
+git init
+Add the remote
+
+bash
+Copy
+Edit
+git remote add origin https://github.com/OWNER/REPO.git
+Replace OWNER/REPO with the actual path.
+
+Fetch only the one commit you want
+
+bash
+Copy
+Edit
+git fetch --depth=1 origin <COMMIT_SHA>
+<COMMIT_SHA> is the hash of the commit you want (e.g. a1b2c3d4).
+
+Check out that commit
+
+bash
+Copy
+Edit
+git checkout FETCH_HEAD
+You’ll be in a “detached HEAD” state at exactly that point in history.
+
+(Optional) Create a branch
+If you want to make changes or keep a named pointer:
+
+bash
+Copy
+Edit
+git checkout -b legacy-work
+You now have the repo at that exact commit in my-old-commit/. No other history was downloaded.
+
+Method 2: Downloading a ZIP from GitHub
+If you just want the files as they were at that commit, and don’t need to do further Git operations, you can grab a ZIP directly from GitHub:
+
+Find the commit on GitHub
+
+Go to https://github.com/OWNER/REPO/commits/BRANCH
+
+Click the timestamp next to the commit you want.
+
+Copy the URL—or just note the SHA (e.g. a1b2c3d4e5f6…).
+
+Download the ZIP
+
+In your browser, navigate to:
+
+bash
+Copy
+Edit
+https://github.com/OWNER/REPO/archive/<COMMIT_SHA>.zip
+The download will start automatically (no login needed for public repos).
+
+Extract into a new folder
+
+bash
+Copy
+Edit
+mkdir my-old-zip
+unzip <COMMIT_SHA>.zip -d my-old-zip
+Inside my-old-zip/ you’ll find a folder named REPO-<COMMIT_SHA>/ containing exactly that snapshot.
+
+Which to choose?
+Git method if you want to inspect history, diff against other commits, or make new branches.
+
+ZIP download if you only need the files at that point and don’t plan further Git work.
+
+Either way, you’ll end up with a directory populated with the state of the repository at your chosen earlier commit. 

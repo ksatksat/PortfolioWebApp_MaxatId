@@ -73,6 +73,10 @@ nav ul li a:hover {
     color: white;
     border-radius: 5px;
 }
+.langWrap a{
+    color: var(--dark-color);
+    text-decoration: none;
+}
 
 /* ========== Image Block Styles ========== */
 .image-block {
@@ -200,7 +204,7 @@ nav ul li a:hover {
 }
 
 .portfolio-item {
-    background-color: #ffbd6d;
+    background-color: #d0d5e2;
     padding: 10px;
     border-radius: 10px;
 }
@@ -364,7 +368,8 @@ body.dark-mode .portfolio h2,
 body.dark-mode .videos h2,
 body.dark-mode .contacts h2,
 body.dark-mode footer .footer-content h3,
-body.dark-mode .skills ul li {
+body.dark-mode .skills ul li,
+body.dark-mode .langWrap a{
     color: var(--light-color);/*#e0e0e0*/
 }
 

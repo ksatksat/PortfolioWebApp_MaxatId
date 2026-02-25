@@ -11,7 +11,7 @@
         "theme_toggle_dark": "Dark mode",
 
         "aboutH2_": "About",
-        "aboutP_": "Full-Stack Developer specializing in building scalable solutions with ASP.NET Core and crafting fluid, user-centric interfaces using React. I bridge the gap between robust backend architecture and modern frontend aesthetics. I also create games as a hobby.",
+        "aboutP_": "Full-Stack Developer specializing in building scalable solutions with ASP.NET Core and crafting fluid, user-centric interfaces using React. I bridge the gap between robust backend architecture and modern frontend aesthetics. This web app was made by using HTML, CSS, JavaScript, ASP.NET Core, SQLite. I also create games as a hobby.",
         "aboutCBtn_": "Contact me",
 
         "skillsH2_": "My skills",
@@ -28,7 +28,7 @@
 
         "locationH3_": "Location",
 
-        "aboutWebsite_": "Dmitriy Ivanov. Made on Unity courses 13.4.2025\u00A9"
+        "aboutWebsite_": "Maksat Idirisov. Made by CSS, HTML, JavaScript, ASP.NET Core and SQLite. 13.4.2025"
     },
     "kyrgyz":{
         "logo":"Максат Идирисов",
@@ -42,7 +42,7 @@
         "theme_toggle_dark": "Караңгы",
 
         "aboutH2_": "Мен жөнүндө",
-        "aboutP_": "ASP.NET Core менен масштабдуу чечимдерди түзүүгө жана React колдонуп, суюк, колдонуучуга багытталган интерфейстерди түзүүгө адистешкен Full-Stack иштеп чыгуучусу. Мен бекем бэкэнд архитектурасы менен заманбап фронтенд эстетикасынын ортосундагы ажырымды толтурам. Ошондой эле, хобби катары оюндарды жаратам.",
+        "aboutP_": "ASP.NET Core менен масштабдуу чечимдерди түзүүгө жана React колдонуп, суюк, колдонуучуга багытталган интерфейстерди түзүүгө адистешкен Full-Stack иштеп чыгуучусу. Мен бекем бэкэнд архитектурасы менен заманбап фронтенд эстетикасынын ортосундагы ажырымды толтурам. Бул веб-тиркеме HTML, CSS, JavaScript, ASP.NET Core, SQLite колдонуу менен түзүлгөн. Ошондой эле, хобби катары оюндарды жаратам.",
         "aboutCBtn_": "Мени менен байланыш",
 
         "skillsH2_": "Менин чеберчилигим",
@@ -59,7 +59,7 @@
 
         "locationH3_": "Жайгашкан жери",
 
-        "aboutWebsite_": "Дмитрий Иванов. Ушул вебсайт Unity курста жасалган 13.4.2025\u00A9"
+        "aboutWebsite_": "Максат Идирисов. CSS, HTML, JavaScript, ASP.NET Core жана SQLite тарабынан жасалган. 13.4.2025"
     },
     "russian":{
         "logo":"Максат Идирисов",
@@ -73,7 +73,7 @@
         "theme_toggle_dark": "Темный",
 
         "aboutH2_": "Обо мне",
-        "aboutP_": "Разработчик Full-Stack, специализирующийся на создании масштабируемых решений с использованием ASP.NET Core и разработке гибких, ориентированных на пользователя интерфейсов с помощью React. Я устраняю разрыв между надежной архитектурой бэкенда и современной эстетикой фронтенда. Также в качестве хобби создаю игры.",
+        "aboutP_": "Разработчик Full-Stack, специализирующийся на создании масштабируемых решений с использованием ASP.NET Core и разработке гибких, ориентированных на пользователя интерфейсов с помощью React. Я устраняю разрыв между надежной архитектурой бэкенда и современной эстетикой фронтенда. Это веб-приложение было создано с использованием HTML, CSS, JavaScript, ASP.NET Core и SQLite. Также в качестве хобби создаю игры.",
         "aboutCBtn_": "Связаться со мной",
 
         "skillsH2_": "Мои навыки",
@@ -90,6 +90,6 @@
 
         "locationH3_": "Местоположение",
 
-        "aboutWebsite_": "Иванов Дмитрий. Создано на курсах по Юнити и разработке игр 13.4.2025\u00A9"
+        "aboutWebsite_": "Максат Идирисов. Создано с использованием CSS, HTML, JavaScript, ASP.NET Core и SQLite. 13.04.2025"
     }
 }

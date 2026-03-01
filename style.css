@@ -49,7 +49,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: var(--dark-color);/*#333*/
+    color: var(--dark-color);
 }
 
 nav ul {
@@ -62,7 +62,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--dark-color);/*#333*/
+    color: var(--dark-color);
     font-size: 18px;
     padding: 10px 15px;
     transition: background 0.3s, color 0.3s;
@@ -82,42 +82,21 @@ nav ul li a:hover {
 .image-block {
     display: flex;
     justify-content: center;
-    margin: 0px, 0px;/*40px*/
+    margin: 0px, 0px;
 }
 
-/*.image-block img {
-    width: 100%;
-    /* 60% width of the screen */
-    /*height: 200px;
-    /* Height set to 200px */
-    /*object-fit: cover;
-    border-radius: 10px;
-    /* Rounded corners for the image */
-/*}*/
 .texture-box{
     width: 100%;
-    /* Your desired width */
     height: 100px;
-    /* Your desired height */
     margin: 0px auto;
-    /* Centered with auto */
-    /*border-radius: 10px;*/
-
-    /* The Texture Logic */
     background-image: url('img/textures/twine-moss-4510-mm-architextures.jpg');
     background-repeat: repeat;
-
-    /* ADJUST THIS to make the texture smaller or larger */
     background-size: 150px;
-    /* Smaller number = smaller texture pattern */
-
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Subtle border for depth */
 }
 /* ========== "Обо мне" Section Styles ========== */
 .about {
     width: 60%;
-    /* Same width as the image block */
     margin: 40px auto;
     padding: 50px;
     text-align: center;
@@ -137,26 +116,22 @@ nav ul li a:hover {
 
 .contact-btn {
     background-color: #3090ff;
-    /* Valid hex color code */
     color: white;
     font-size: 18px;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    /* Same rounding as the image */
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .contact-btn:hover {
     background-color: #2070e0;
-    /* Hover color */
 }
 
 /* ========== "Мои навыки" Section Styles ========== */
 .skills {
     width: 60%;
-    /* Same width as above */
     margin: 40px auto;
     padding: 50px;
     text-align: center;
@@ -186,7 +161,6 @@ nav ul li a:hover {
 /* ========== "Портфолио" Section Styles ========== */
 .portfolio {
     width: 60%;
-    /* Same width as above */
     margin: 40px auto;
     padding: 50px;
     text-align: center;
@@ -232,7 +206,7 @@ nav ul li a:hover {
 .videos h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: var(--dark-color);/*#333*/
+    color: var(--dark-color);
 }
 
 /* Container for the videos arranged in one row */
@@ -246,11 +220,8 @@ nav ul li a:hover {
 /* Styling for each embedded video */
 .video-container iframe {
     flex: 1 1 30%;
-    /* Grows and shrinks, base width ~30% */
     min-width: 250px;
-    /* Ensures the iframe doesn't get too narrow */
     height: 200px;
-    /* Adjust the height as needed to maintain aspect ratio */
     border: 0;
     border-radius: 10px;
 }
@@ -258,7 +229,6 @@ nav ul li a:hover {
 /* ========== "Контакты" Section Styles ========== */
 .contacts {
     width: 60%;
-    /* Same width as above */
     margin: 40px auto;
     padding: 50px;
     text-align: center;
@@ -287,13 +257,11 @@ nav ul li a:hover {
 
 .contact-form button {
     background-color: #3090ff;
-    /* Valid hex color code for the button */
     color: white;
     font-size: 18px;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    /* Same rounding as the image */
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -350,8 +318,8 @@ footer {
 
 /* ===== Dark Mode Styles ===== */
 body.dark-mode {
-    background-color: var(--dark-color);/*#121212*/
-    color: var(--light-color);/*#e0e0e0*/
+    background-color: var(--dark-color);
+    color: var(--light-color);
     background-image: var(--dark-texture);
 }
 
@@ -366,11 +334,12 @@ body.dark-mode .about h2,
 body.dark-mode .skills h2,
 body.dark-mode .portfolio h2,
 body.dark-mode .videos h2,
+body.dark-mode .games h2,
 body.dark-mode .contacts h2,
 body.dark-mode footer .footer-content h3,
 body.dark-mode .skills ul li,
 body.dark-mode .langWrap a{
-    color: var(--light-color);/*#e0e0e0*/
+    color: var(--light-color);
 }
 
 body.dark-mode .portfolio-item{
@@ -393,8 +362,55 @@ body.dark-mode .contact-btn {
 body.dark-mode .contact-btn:hover {
     background-color: #3090ff;
 }
-/*================================ Game Iframe ===============*/
-.game_iframe{
+/* ========== Browser Games Section ========== */
+.games {
+    width: 60%;
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+/* The wrapper that holds the cards */
+.game-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* Stack them vertically for better spacing */
+    gap: 40px;
+    align-items: center;
+}
+
+/* Individual Card for each game */
+.game-card {
+    width: 100%;
+    max-width: 800px;
+    /* Limits how wide the game gets on big screens */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Subtle background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* The actual Iframe */
+.game-card iframe {
+    width: 100%;
+    /* Fills the card width */
+    height: 450px;
+    /* Fixed height for the game area */
+    border: none;
+    border-radius: 10px;
+}
+
+/* The Link under the game */
+.game-card a {
+    display: block;
+    margin-top: 15px;
+    color: #3090ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dark Mode adjustment */
+body.dark-mode .game-card {
+    background-color: #1e1e1e;
 }

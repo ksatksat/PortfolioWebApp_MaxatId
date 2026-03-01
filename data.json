@@ -4,14 +4,15 @@
         "aboutMe_li_": "About me",
         "skills_li_": "My skills",
         "portfolio_li_": "Portfolio",
-        "videos_li_": "Video",
+        "games_li_": "Browser games",
+        "videos_li_": "Videos",
         "contacts_li_": "Contacts",
 
         "theme_toggle_light": "Light mode",
         "theme_toggle_dark": "Dark mode",
 
         "aboutH2_": "About",
-        "aboutP_": "Full-Stack Developer specializing in building scalable solutions with ASP.NET Core and crafting fluid, user-centric interfaces using React. I bridge the gap between robust backend architecture and modern frontend aesthetics. This web app was made by using HTML, CSS, JavaScript, ASP.NET Core, SQLite. I also create games as a hobby.",
+        "aboutP_": "Full-Stack Developer specializing in building scalable solutions with ASP.NET Core and crafting fluid, user-centric interfaces using React. I bridge the gap between robust backend architecture and modern frontend aesthetics. This web app was made by me using HTML, CSS, JavaScript, ASP.NET Core, SQLite. I also create games as a hobby.",
         "aboutCBtn_": "Contact me",
 
         "skillsH2_": "My skills",
@@ -21,7 +22,9 @@
         "portfolioH3_2_": "Runner game",
         "portfolioH3_3_": "Fighting game",
 
-        "videosH2_": "Video about my games",
+        "videosH2_": "Videos",
+
+        "gamesH2_": "Browser games",
 
         "contactsH2_": "Contacts",
         "contactsBtn_": "Send",
@@ -35,6 +38,7 @@
         "aboutMe_li_": "Мен жөнүндө",
         "skills_li_": "Менин чеберчилигим",
         "portfolio_li_": "Портфолио",
+        "games_li_": "Браузер оюндар",
         "videos_li_": "Видеолор",
         "contacts_li_": "Байланыштар",
 
@@ -42,7 +46,7 @@
         "theme_toggle_dark": "Караңгы",
 
         "aboutH2_": "Мен жөнүндө",
-        "aboutP_": "ASP.NET Core менен масштабдуу чечимдерди түзүүгө жана React колдонуп, суюк, колдонуучуга багытталган интерфейстерди түзүүгө адистешкен Full-Stack иштеп чыгуучусу. Мен бекем бэкэнд архитектурасы менен заманбап фронтенд эстетикасынын ортосундагы ажырымды толтурам. Бул веб-тиркеме HTML, CSS, JavaScript, ASP.NET Core, SQLite колдонуу менен түзүлгөн. Ошондой эле, хобби катары оюндарды жаратам.",
+        "aboutP_": "ASP.NET Core менен масштабдуу чечимдерди түзүүгө жана React колдонуп, суюк, колдонуучуга багытталган интерфейстерди түзүүгө адистешкен Full-Stack иштеп чыгуучусу. Мен бекем бэкэнд архитектурасы менен заманбап фронтенд эстетикасынын ортосундагы ажырымды толтурам. Бул веб-тиркемени мен HTML, CSS, JavaScript, ASP.NET Core, SQLite колдонуу менен түзүлгөм. Ошондой эле, хобби катары оюндарды жаратам.",
         "aboutCBtn_": "Мени менен байланыш",
 
         "skillsH2_": "Менин чеберчилигим",
@@ -52,7 +56,9 @@
         "portfolioH3_2_": "Жүгүрүү оюну",
         "portfolioH3_3_": "Уруш оюну",
 
-        "videosH2_": "Менин оюндарым жөнүндө видео",
+        "videosH2_": "Видеолор",
+
+        "gamesH2_": "Браузер оюндар",
 
         "contactsH2_": "Байланыштар",
         "contactsBtn_": "Жөнөтүү",
@@ -66,6 +72,7 @@
         "aboutMe_li_": "Обо мне",
         "skills_li_": "Мои навыки",
         "portfolio_li_": "Портфолио",
+        "games_li_": "Браузерные игры",
         "videos_li_": "Видео",
         "contacts_li_": "Контакты",
 
@@ -73,7 +80,7 @@
         "theme_toggle_dark": "Темный",
 
         "aboutH2_": "Обо мне",
-        "aboutP_": "Разработчик Full-Stack, специализирующийся на создании масштабируемых решений с использованием ASP.NET Core и разработке гибких, ориентированных на пользователя интерфейсов с помощью React. Я устраняю разрыв между надежной архитектурой бэкенда и современной эстетикой фронтенда. Это веб-приложение было создано с использованием HTML, CSS, JavaScript, ASP.NET Core и SQLite. Также в качестве хобби создаю игры.",
+        "aboutP_": "Разработчик Full-Stack, специализирующийся на создании масштабируемых решений с использованием ASP.NET Core и разработке гибких, ориентированных на пользователя интерфейсов с помощью React. Я устраняю разрыв между надежной архитектурой бэкенда и современной эстетикой фронтенда. Это веб-приложение было создано мной с использованием HTML, CSS, JavaScript, ASP.NET Core и SQLite. Также в качестве хобби создаю игры.",
         "aboutCBtn_": "Связаться со мной",
 
         "skillsH2_": "Мои навыки",
@@ -83,7 +90,9 @@
         "portfolioH3_2_": "Ранер игра",
         "portfolioH3_3_": "Игра в жанре файтинг",
 
-        "videosH2_": "Видео о моих играх",
+        "videosH2_": "Видео",
+
+        "gamesH2_": "Браузерные игры",
 
         "contactsH2_": "Контакты",
         "contactsBtn_": "Отправить",

@@ -12,7 +12,7 @@ const aboutMe_li     = document.querySelector('.header-left nav ul li:nth-child(
 const skills_li      = document.querySelector('.header-left nav ul li:nth-child(2) a');
 const portfolio_li   = document.querySelector('.header-left nav ul li:nth-child(3) a');
 const videos_li      = document.querySelector('.header-left nav ul li:nth-child(4) a');
-const games_li      = document.querySelector('.header-left nav ul li:nth-child(5) a');
+const games_li       = document.querySelector('.header-left nav ul li:nth-child(5) a');
 const contacts_li    = document.querySelector('.header-left nav ul li:nth-child(6) a');
 //about section
 const aboutH2        = document.querySelector('.about h2');
@@ -25,11 +25,21 @@ const portfolioH2    = document.querySelector('.portfolio h2');
 const pH3List        = document.querySelectorAll('.portfolio-grid .portfolio-item h3');
 const portfolioH3_1  = pH3List[0];//race game
 const portfolioH3_2  = pH3List[1];//runner game
-const portfolioH3_3  = pH3List[2];//fight game
+const portfolioH3_3  = pH3List[2];//fighting game
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++
+const portfolioH3_4  = pH3List[3];//Retro PC 3d model
+const portfolioH3_5  = pH3List[4];//Sneakers Shop web app
+const portfolioH3_6  = pH3List[5];//Comics app
+const portfolioH3_7  = pH3List[6];//Replica of Spirit Breaker
+const portfolioH3_8  = pH3List[7];//Finance app
+const portfolioH3_9  = pH3List[8];//Parkour game
+const portfolioH3_10 = pH3List[9];//Web app of "Puppets Theater"
+const portfolioH3_11 = pH3List[10];//Kanban web site
+const portfolioH3_12 = pH3List[11];//Notepad app
 //videos section
 const videosH2       = document.querySelector('.videos h2');
 //games section
-const gamesH2       = document.querySelector('.games h2');
+const gamesH2        = document.querySelector('.games h2');
 //contacts section
 const contactsH2     = document.querySelector('.contacts h2');
 const contactsBtn    = document.querySelector('.contact-form button');

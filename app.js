@@ -208,4 +208,22 @@ fetch('./data.json')
     updateThemeToggleText();
   })
   .catch(err => console.error('Failed to load translations:', err));
-        
+
+function activateGame(element) {
+    const gameUrl = element.getAttribute('data-src');
+    
+    // Create the iframe string
+    const iframeHtml = `
+        <iframe src="${gameUrl}" 
+                allowtransparency="true" 
+                width="485" height="402" 
+                frameborder="0" scrolling="no" 
+                allowfullscreen>
+        </iframe>`;
+    
+    // Replace the placeholder content with the iframe
+    element.innerHTML = iframeHtml;
+    
+    // Remove the click event so it doesn't reload if clicked again
+    element.onclick = null;
+}

@@ -422,3 +422,31 @@ body.dark-mode .contact-btn:hover {
 body.dark-mode .game-card {
     background-color: #1e1e1e;
 }
+
+.game-placeholder {
+    width: 800px;
+    height: 470px;
+    background-color: #1a1a1a;
+    /* Dark background like a turned-off screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid #333;
+    transition: border-color 0.3s;
+}
+
+.game-placeholder:hover {
+    border-color: #007bff;
+    /* Highlight on hover */
+}
+
+.play-button-overlay span {
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 123, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+}

@@ -417,7 +417,25 @@ footer {
     border-radius: 5px;
     font-size: 15px;
 }
+/*====================================================================*/
+.game-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fills the box, crops edges if needed */
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+.play-button-overlay {
+    position: absolute;
+    /* make sure this is already set or add it */
+    z-index: 1;
+    /* sits above the image */
+}
+/*====================================================================*/
 /* ===== Dark Mode Styles ===== */
 body.dark-mode {
     background-color: var(--dark-color);

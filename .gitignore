@@ -1,0 +1,21 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# SQLite database (contains real user data — don't commit it)
+*.db
+*.db-shm
+*.db-wal
+
+# Migrations can be committed — they are safe
+# but the actual database file should not be
+
+# Environment secrets
+appsettings.Development.json
+
+# OS files
+.DS_Store
+Thumbs.db

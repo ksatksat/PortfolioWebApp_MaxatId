@@ -1,21 +1,33 @@
-# .NET
-bin/
-obj/
+# --- Frontend (HTML, CSS, JS) ---
+node_modules/
+.npm/
+dist/
+build/
+.cache/
+*.log
+
+# --- ASP.NET Core & .NET ---
+[Bb]in/
+[Oo]bj/
 *.user
 *.suo
+*.suo
+*.sln.docstates
 .vs/
+.vscode/
 
-# SQLite database (contains real user data — don't commit it)
+# --- SQLite Databases ---
 *.db
+*.sqlite
+*.sqlite3
 *.db-shm
 *.db-wal
 
-# Migrations can be committed — they are safe
-# but the actual database file should not be
-
-# Environment secrets
+# --- Environment Secrets ---
 appsettings.Development.json
 
-# OS files
+# --- OS Specific ---
 .DS_Store
 Thumbs.db
+```
+

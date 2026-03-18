@@ -18,6 +18,12 @@ const contacts_li    = document.querySelector('.header-left nav ul li:nth-child(
 const aboutH2        = document.querySelector('.about h2');
 const aboutP         = document.querySelector('.about p');
 const aboutCBtn      = document.querySelector('.contact-btn');
+//================== Contact me button START =========================
+// Scroll to contacts when button is clicked
+document.getElementById('contact-btn').addEventListener('click', function() {
+    document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
+});
+//================== Contact me button END =========================
 //skills section
 const skillsH2       = document.querySelector('.skills h2');
 //portfolio section
@@ -55,6 +61,7 @@ const gamesH2        = document.querySelector('.games h2');
 //contacts section
 const contactsH2     = document.querySelector('.contacts h2');
 const contactsBtn    = document.querySelector('.contact-form button');
+
 //Location section
 const locationH3     = document.querySelector('.footer-content h3');
 //social links section
@@ -263,6 +270,6 @@ fetch('/api/visitor')
     .then(data => {
         console.log('Total visits:', data.visits);
         //show on a page somewhere
-        document.querySelector('.aboutWebsite').textContent += ` | Visits: ${data.visits}`;
+        document.querySelector('.visits').textContent = `Баруулар: | Визиты: | Visits: ${data.visits}`;
     })
     .catch(err => console.error('Visitor counter error:', err));

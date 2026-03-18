@@ -352,6 +352,11 @@ footer {
     font-size: 13px;
     margin-top: 16px;
 }
+.visits{
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 16px;
+}
 
 /* ========== Browser Games Section ========== */
 .games h2 {

@@ -1,0 +1,262 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 30px;
+            color: #3090ff;
+            letter-spacing: 1px;
+        }
+
+        /* Login box */
+        #login-box {
+            max-width: 380px;
+            margin: 80px auto;
+            background: #1a1a2e;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #2a2a4a;
+            text-align: center;
+        }
+
+        #login-box h2 {
+            margin-bottom: 20px;
+            color: #3090ff;
+        }
+
+        #login-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #3090ff;
+            background: #0f0f1a;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        #login-box button {
+            width: 100%;
+            padding: 12px;
+            background: #3090ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #login-box button:hover {
+            background: #2070e0;
+        }
+
+        #login-error {
+            color: #ff6b6b;
+            margin-top: 12px;
+            font-size: 14px;
+            display: none;
+        }
+
+        /* Messages panel */
+        #messages-panel {
+            display: none;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar h2 {
+            color: #3090ff;
+            font-size: 22px;
+        }
+
+        .logout-btn {
+            padding: 8px 16px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: #1a1a2e;
+            padding: 16px 24px;
+            border-radius: 10px;
+            border: 1px solid #2a2a4a;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-box .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #3090ff;
+        }
+
+        .stat-box .label {
+            font-size: 13px;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        /* Message cards */
+        .message-card {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .message-card.unread {
+            border-left: 4px solid #3090ff;
+        }
+
+        .message-card.read {
+            border-left: 4px solid #2a2a4a;
+            opacity: 0.75;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sender-info .name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .sender-info .email {
+            font-size: 13px;
+            color: #3090ff;
+            margin-top: 2px;
+        }
+
+        .card-meta {
+            text-align: right;
+        }
+
+        .card-meta .date {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .unread-badge {
+            display: inline-block;
+            background: #3090ff;
+            color: white;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 4px;
+        }
+
+        .read-badge {
+            display: inline-block;
+            background: #444;
+            color: #aaa;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 4px;
+        }
+
+        .message-text {
+            background: #0f0f1a;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 14px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-read {
+            padding: 7px 16px;
+            background: #2a6acc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .btn-read:hover {
+            background: #3090ff;
+        }
+
+        .btn-delete {
+            padding: 7px 16px;
+            background: #4a1a1a;
+            color: #ff6b6b;
+            border: 1px solid #ff4444;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .btn-delete:hover {
+            background: #6a2a2a;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #555;
+            font-size: 18px;
+        }
+
+        #loading {
+            text-align: center;
+            padding: 40px;
+            color: #3090ff;
+            font-size: 16px;
+        }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Contact Messages</title>
+    <link rel="stylesheet" href="adminstyle.css">
+</head>
+
+<body>
+    <!-- LOGIN BOX -->
+    <div id="login-box">
+        <h2>🔒 Admin Login</h2>
+        <input type="password" id="password-input" placeholder="Enter admin password"
+            onkeydown="if(event.key==='Enter') login()">
+        <button onclick="login()">Enter</button>
+        <p id="login-error">Wrong password. Try again.</p>
+    </div>
+
+    <!-- MESSAGES PANEL (hidden until login) -->
+    <div id="messages-panel">
+        <div class="top-bar">
+            <h2>📬 Contact Messages</h2>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="number" id="stat-total">—</div>
+                <div class="label">Total Messages</div>
+            </div>
+            <div class="stat-box">
+                <div class="number" id="stat-unread">—</div>
+                <div class="label">Unread</div>
+            </div>
+            <div class="stat-box">
+                <div class="number" id="stat-read">—</div>
+                <div class="label">Read</div>
+            </div>
+        </div>
+
+        <div id="loading">Loading messages...</div>
+        <div id="messages-list"></div>
+    </div>
+
+    <script src="adminscript.js" defer></script>
+</body>
+
+</html>

@@ -104,7 +104,7 @@ links.forEach(el => {
         contacts_li.textContent    = data[lang].contacts_li_;
         //about section 
         aboutH2.textContent        = data[lang].aboutH2_;
-        aboutP.textContent         = data[lang].aboutP_;
+        aboutP.innerHTML           = data[lang].aboutP_;
         aboutCBtn.textContent      = data[lang].aboutCBtn_;
         //skills section 
         skillsH2.textContent       = data[lang].skillsH2_;
@@ -169,7 +169,8 @@ fetch('/data.json')
     contacts_li.textContent    = data[defaultLang].contacts_li_;
     //about section 
     aboutH2.textContent        = data[defaultLang].aboutH2_;
-    aboutP.textContent         = data[defaultLang].aboutP_;
+    aboutP.innerHTML           = data[defaultLang].aboutP_;
+    //aboutP.textContent         = data[defaultLang].aboutP_;
     aboutCBtn.textContent      = data[defaultLang].aboutCBtn_;
     //skills section 
     skillsH2.textContent       = data[defaultLang].skillsH2_;

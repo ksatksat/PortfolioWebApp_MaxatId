@@ -12,7 +12,7 @@
         "theme_toggle_dark": "Dark mode",
 
         "aboutH2_": "About",
-        "aboutP_": "Full-Stack Developer specializing in building scalable solutions with ASP.NET Core and crafting fluid, user-centric interfaces using React. I bridge the gap between robust backend architecture and modern frontend aesthetics. This web app was made by me using HTML, CSS, JavaScript, ASP.NET Core, SQLite. I also create games as a hobby.",
+        "aboutP_": "I'm a web applications developer. I use ASP.NET Core for web development. For the frontend I use HTML, CSS, JavaScript, and the React framework. This web app was made by me using HTML, CSS, JavaScript, ASP.NET Core, SQLite. <br><br>At Finance Web App project, I was responsible for frontend and backend. I used pure JavaScript, and ASP.NET Core MVC for backend. At Theater website, I was full-stack developer.<br><br>I also create games as a hobby.",
         "aboutCBtn_": "Contact me",
 
         "skillsH2_": "My skills",
@@ -68,7 +68,7 @@
         "theme_toggle_dark": "Караңгы",
 
         "aboutH2_": "Мен жөнүндө",
-        "aboutP_": "ASP.NET Core менен масштабдуу чечимдерди түзүүгө жана React колдонуп, суюк, колдонуучуга багытталган интерфейстерди түзүүгө адистешкен Full-Stack иштеп чыгуучусу. Мен бекем бэкэнд архитектурасы менен заманбап фронтенд эстетикасынын ортосундагы ажырымды толтурам. Бул веб-тиркемени мен HTML, CSS, JavaScript, ASP.NET Core, SQLite колдонуу менен түзүлгөм. Ошондой эле, хобби катары оюндарды жаратам.",
+        "aboutP_": "Мен веб-тиркемелерди иштеп чыгуучумун. Веб-иштеп чыгуу үчүн ASP.NET Core колдоном. Фронтенд үчүн мен HTML, CSS, JavaScript жана React алкагын колдоном. Бул веб-тиркемени мен HTML, CSS, JavaScript, ASP.NET Core, SQLite колдонуп жасадым.<br><br>Finance Web App долбоорунда мен фронтенд жана бэкенд үчүн жооптуу болчумун. Мен таза JavaScriptти, жана бэкенд үчүн ASP.NET Core MVC колдондум. Theater веб-сайтында мен толук стек иштеп чыгуучу болчумун.<br><br>Мен ошондой эле оюндарды хобби катары жаратам.",
         "aboutCBtn_": "Мени менен байланыш",
 
         "skillsH2_": "Менин чеберчилигим",
@@ -124,7 +124,7 @@
         "theme_toggle_dark": "Темный",
 
         "aboutH2_": "Обо мне",
-        "aboutP_": "Разработчик Full-Stack, специализирующийся на создании масштабируемых решений с использованием ASP.NET Core и разработке гибких, ориентированных на пользователя интерфейсов с помощью React. Я устраняю разрыв между надежной архитектурой бэкенда и современной эстетикой фронтенда. Это веб-приложение было создано мной с использованием HTML, CSS, JavaScript, ASP.NET Core и SQLite. Также в качестве хобби создаю игры.",
+        "aboutP_": "Я веб-разработчик. Для веб-разработки использую ASP.NET Core. Для фронтенда использую HTML, CSS, JavaScript и фреймворк React. Это веб-приложение создано мной с использованием HTML, CSS, JavaScript, ASP.NET Core и SQLite.<br><br>В проекте Finance Web App я отвечал за фронтенд и бэкенд. Использовал чистый JavaScript, и ASP.NET Core MVC для бэкенда. На веб-сайте Theater я был full-stack разработчиком.<br><br>В качестве хобби также создаю игры.",
         "aboutCBtn_": "Связаться со мной",
 
         "skillsH2_": "Мои навыки",

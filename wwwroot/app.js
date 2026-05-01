@@ -1,230 +1,167 @@
-// Select the toggle button and the body
+document.addEventListener('DOMContentLoaded', () => {
+// ============================= THEME =============================
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body           = document.body;
-//============================= TRANSLATION - language wrap
-const langEl         = document.querySelector('.langWrap');
-//============================= TRANSLATION - language wrap
-const links          = document.querySelectorAll('.langWrap a');
-//variables holds html elements : 
-const logoEl         = document.querySelector('.logo');
-//a[href="#about"] - так можно получить нужный элемент - или как на строчке ниже
-const aboutMe_li     = document.querySelector('.header-left nav ul li:nth-child(1) a');
-const skills_li      = document.querySelector('.header-left nav ul li:nth-child(2) a');
-const portfolio_li   = document.querySelector('.header-left nav ul li:nth-child(3) a');
-const videos_li      = document.querySelector('.header-left nav ul li:nth-child(4) a');
-const games_li       = document.querySelector('.header-left nav ul li:nth-child(5) a');
-const contacts_li    = document.querySelector('.header-left nav ul li:nth-child(6) a');
-//about section
-const aboutH2        = document.querySelector('.about h2');
-const aboutP         = document.querySelector('.about p');
-const aboutCBtn      = document.querySelector('.contact-btn');
-//================== Contact me button START =========================
-// Scroll to contacts when button is clicked
+
+// ============================= TRANSLATION =============================
+const langEl      = document.querySelector('.langWrap');
+const links       = document.querySelectorAll('.langWrap a');
+const logoEl      = document.querySelector('.logo');
+const aboutMe_li  = document.querySelector('.header-left nav ul li:nth-child(1) a');
+const skills_li   = document.querySelector('.header-left nav ul li:nth-child(2) a');
+const portfolio_li= document.querySelector('.header-left nav ul li:nth-child(3) a');
+const videos_li   = document.querySelector('.header-left nav ul li:nth-child(4) a');
+const games_li    = document.querySelector('.header-left nav ul li:nth-child(5) a');
+const contacts_li = document.querySelector('.header-left nav ul li:nth-child(6) a');
+const aboutH2     = document.querySelector('.about h2');
+const aboutP      = document.querySelector('.about p');
+const aboutCBtn   = document.querySelector('.contact-btn');
+const skillsH2    = document.querySelector('.skills h2');
+const portfolioH2 = document.querySelector('.portfolio h2');
+const videosH2    = document.querySelector('.videos h2');
+const gamesH2     = document.querySelector('.games h2');
+const contactsH2  = document.querySelector('.contacts h2');
+const contactsBtn = document.querySelector('.contact-form button');
+const locationH3  = document.querySelector('.footer-content h3');
+const aboutWebsite= document.querySelector('.aboutWebsite');
+
+let data; // holds translations
+let portfolioItems = []; // holds portfolio items from DB
+let currentLang = 'english'; // tracks active language
+
+// ============================= CONTACT BUTTON =============================
 document.getElementById('contact-btn').addEventListener('click', function() {
     document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
 });
-//================== Contact me button END =========================
-//skills section
-const skillsH2       = document.querySelector('.skills h2');
-//portfolio section
-const portfolioH2    = document.querySelector('.portfolio h2');
-const pH3List        = document.querySelectorAll('.portfolio-grid .portfolio-item h3');
-const portfolioH3_1  = pH3List[0];//race game
-const portfolioH3_2  = pH3List[1];//runner game
-const portfolioH3_3  = pH3List[2];//fighting game
-const portfolioH3_4  = pH3List[3];//Retro PC 3d model
-const portfolioH3_5  = pH3List[4];//Sneakers Shop web app
-const portfolioH3_6  = pH3List[5];//Comics app
-const portfolioH3_7  = pH3List[6];//Replica of Spirit Breaker
-const portfolioH3_8  = pH3List[7];//Finance app
-const portfolioH3_9  = pH3List[8];//Parkour game
-const portfolioH3_10 = pH3List[9];//Web app of "Puppets Theater"
-const portfolioH3_11 = pH3List[10];//Kanban web site
-const portfolioH3_12 = pH3List[11];//Notepad app
-const pPList         = document.querySelectorAll('.portfolio-grid .portfolio-item p');
-const portfolioP_1   = pPList[0];//race game
-const portfolioP_2   = pPList[1];//runner game
-const portfolioP_3   = pPList[2];//fighting game
-const portfolioP_4   = pPList[3];//Retro PC 3d model
-const portfolioP_5   = pPList[4];//Sneakers Shop web app
-const portfolioP_6   = pPList[5];//Comics app
-const portfolioP_7   = pPList[6];//Replica of Spirit Breaker
-const portfolioP_8   = pPList[7];//Finance app
-const portfolioP_9   = pPList[8];//Parkour game
-const portfolioP_10  = pPList[9];//Web app of "Puppets Theater"
-const portfolioP_11  = pPList[10];//Kanban web site
-const portfolioP_12  = pPList[11];//Notepad app
-//videos section
-const videosH2       = document.querySelector('.videos h2');
-//games section
-const gamesH2        = document.querySelector('.games h2');
-//contacts section
-const contactsH2     = document.querySelector('.contacts h2');
-const contactsBtn    = document.querySelector('.contact-form button');
 
-//Location section
-const locationH3     = document.querySelector('.footer-content h3');
-//social links section
-const aboutWebsite   = document.querySelector('.aboutWebsite');
-let data; // will hold your translations
-
-// Function to switch themes
+// ============================= THEME =============================
 function updateThemeToggleText() {
-    
-    const currentLang = langEl.querySelector('.active').getAttribute('language');
     if (body.classList.contains('dark-mode')) {
-            //themeToggleBtn.textContent = "Light Mode";//Dark mode active – show Light Mode option
         themeToggleBtn.textContent = data[currentLang].theme_toggle_light;
     } else {
-            //themeToggleBtn.textContent = "Dark Mode";//Light mode active – show Dark Mode option
         themeToggleBtn.textContent = data[currentLang].theme_toggle_dark;
     }
 }
-function toggleTheme(){
+
+function toggleTheme() {
     body.classList.toggle('dark-mode');
     updateThemeToggleText();
 }
-        // Listen for button clicks and call toggleTheme function
+
 themeToggleBtn.addEventListener('click', toggleTheme);
 
-//main logic start here
+// ============================= PORTFOLIO RENDER =============================
+function getPortfolioTitle(item, lang) {
+    if (lang === 'kyrgyz'  && item.titleKy)  return item.titleKy;
+    if (lang === 'russian' && item.titleRu)  return item.titleRu;
+    return item.title;
+}
+
+function getPortfolioDescription(item, lang) {
+    if (lang === 'kyrgyz'  && item.descriptionKy) return item.descriptionKy;
+    if (lang === 'russian' && item.descriptionRu) return item.descriptionRu;
+    return item.description;
+}
+
+function renderPortfolio(lang) {
+    const grid = document.getElementById('portfolio-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    if (portfolioItems.length === 0) {
+        grid.innerHTML = '<p style="color:#888;">No portfolio items yet.</p>';
+        return;
+    }
+
+    portfolioItems.forEach(item => {
+        const title       = getPortfolioTitle(item, lang);
+        const description = getPortfolioDescription(item, lang);
+
+        const div = document.createElement('div');
+        div.className = 'portfolio-item';
+
+        div.innerHTML = `
+            ${item.imageUrl
+                ? `<img src="${item.imageUrl}" alt="${title}">`
+                : ''}
+            <h3>${title}</h3>
+            <p>${description}</p>
+            ${item.projectUrl
+                ? `<a href="${item.projectUrl}" target="_blank" 
+                      rel="noopener noreferrer">${item.projectUrl}</a>`
+                : ''}
+        `;
+        grid.appendChild(div);
+    });
+}
+
+async function loadPortfolioItems() {
+    try {
+        const res = await fetch('/api/portfolio');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        portfolioItems = await res.json();
+        renderPortfolio(currentLang);
+    } catch (err) {
+        console.error('Failed to load portfolio items:', err);
+    }
+}
+
+// ============================= LANGUAGE SWITCH =============================
+function applyLanguage(lang) {
+    currentLang = lang;
+
+    logoEl.textContent          = data[lang].logo;
+    aboutMe_li.textContent      = data[lang].aboutMe_li_;
+    skills_li.textContent       = data[lang].skills_li_;
+    portfolio_li.textContent    = data[lang].portfolio_li_;
+    games_li.textContent        = data[lang].games_li_;
+    videos_li.textContent       = data[lang].videos_li_;
+    contacts_li.textContent     = data[lang].contacts_li_;
+    aboutH2.textContent         = data[lang].aboutH2_;
+    aboutP.innerHTML            = data[lang].aboutP_;
+    aboutCBtn.textContent       = data[lang].aboutCBtn_;
+    skillsH2.textContent        = data[lang].skillsH2_;
+    portfolioH2.textContent     = data[lang].portfolioH2_;
+    videosH2.textContent        = data[lang].videosH2_;
+    gamesH2.textContent         = data[lang].gamesH2_;
+    contactsH2.textContent      = data[lang].contactsH2_;
+    contactsBtn.textContent     = data[lang].contactsBtn_;
+    locationH3.textContent      = data[lang].locationH3_;
+    aboutWebsite.textContent    = data[lang].aboutWebsite_;
+
+    // Re-render portfolio in the new language
+    renderPortfolio(lang);
+    updateThemeToggleText();
+}
+
 links.forEach(el => {
     el.addEventListener('click', () => {
         langEl.querySelector('.active').classList.remove('active');
         el.classList.add('active');
         const lang = el.getAttribute('language');
-        //switch lang
-        logoEl.textContent         = data[lang].logo;
-        //header-left elements 
-        aboutMe_li.textContent     = data[lang].aboutMe_li_;
-        skills_li.textContent      = data[lang].skills_li_;
-        portfolio_li.textContent   = data[lang].portfolio_li_;
-        games_li.textContent       = data[lang].games_li_;
-        videos_li.textContent      = data[lang].videos_li_;
-        contacts_li.textContent    = data[lang].contacts_li_;
-        //about section 
-        aboutH2.textContent        = data[lang].aboutH2_;
-        aboutP.innerHTML           = data[lang].aboutP_;
-        aboutCBtn.textContent      = data[lang].aboutCBtn_;
-        //skills section 
-        skillsH2.textContent       = data[lang].skillsH2_;
-        //portfolio section 
-        portfolioH2.textContent    = data[lang].portfolioH2_;
-        portfolioH3_1.textContent  = data[lang].portfolioH3_1_;
-        portfolioH3_2.textContent  = data[lang].portfolioH3_2_;
-        portfolioH3_3.textContent  = data[lang].portfolioH3_3_;
-        portfolioH3_4.textContent  = data[lang].portfolioH3_4_;
-        portfolioH3_5.textContent  = data[lang].portfolioH3_5_;
-        portfolioH3_6.textContent  = data[lang].portfolioH3_6_;
-        portfolioH3_7.textContent  = data[lang].portfolioH3_7_;
-        portfolioH3_8.textContent  = data[lang].portfolioH3_8_;
-        portfolioH3_9.textContent  = data[lang].portfolioH3_9_;
-        portfolioH3_10.textContent = data[lang].portfolioH3_10_;
-        portfolioH3_11.textContent = data[lang].portfolioH3_11_;
-        portfolioH3_12.textContent = data[lang].portfolioH3_12_;
-
-        portfolioP_1.textContent   = data[lang].portfolioP_1_;
-        portfolioP_2.textContent   = data[lang].portfolioP_2_;
-        portfolioP_3.textContent   = data[lang].portfolioP_3_;
-        portfolioP_4.textContent   = data[lang].portfolioP_4_;
-        portfolioP_5.textContent   = data[lang].portfolioP_5_;
-        portfolioP_6.textContent   = data[lang].portfolioP_6_;
-        portfolioP_7.textContent   = data[lang].portfolioP_7_;
-        portfolioP_8.textContent   = data[lang].portfolioP_8_;
-        portfolioP_9.textContent   = data[lang].portfolioP_9_;
-        portfolioP_10.textContent  = data[lang].portfolioP_10_;
-        portfolioP_11.textContent  = data[lang].portfolioP_11_;
-        portfolioP_12.textContent  = data[lang].portfolioP_12_;
-        //videos section
-        videosH2.textContent       = data[lang].videosH2_;
-        //games section
-        gamesH2.textContent        = data[lang].gamesH2_;
-        //contacts section
-        contactsH2.textContent     = data[lang].contactsH2_;
-        contactsBtn.textContent    = data[lang].contactsBtn_;
-        //Location section
-        locationH3.textContent     = data[lang].locationH3_;
-        //social links section
-        aboutWebsite.textContent   = data[lang].aboutWebsite_;
-        updateThemeToggleText();
+        applyLanguage(lang);
     });
 });
-// fetch the JSON and initialize
+
+// ============================= INIT =============================
+
 fetch('/data.json')
-  .then(res => {
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.json();
-  })
-  .then(json => {
-    data = json;
+    .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+    })
+    .then(json => {
+        data = json;
+        const defaultLang = langEl.querySelector('.active').getAttribute('language');
+        applyLanguage(defaultLang);
+        // Load portfolio from DB after translations are ready
+        loadPortfolioItems();
+    })
+    .catch(err => console.error('Failed to load translations:', err));
 
-    // set all static text to your default language (e.g. “english”)
-    const defaultLang          = langEl.querySelector('.active').getAttribute('language');
-    logoEl.textContent         = data[defaultLang].logo;
-    aboutMe_li.textContent     = data[defaultLang].aboutMe_li_;
-    skills_li.textContent      = data[defaultLang].skills_li_;
-    portfolio_li.textContent   = data[defaultLang].portfolio_li_;
-    games_li.textContent       = data[defaultLang].games_li_;
-    videos_li.textContent      = data[defaultLang].videos_li_;
-    contacts_li.textContent    = data[defaultLang].contacts_li_;
-    //about section 
-    aboutH2.textContent        = data[defaultLang].aboutH2_;
-    aboutP.innerHTML           = data[defaultLang].aboutP_;
-    //aboutP.textContent         = data[defaultLang].aboutP_;
-    aboutCBtn.textContent      = data[defaultLang].aboutCBtn_;
-    //skills section 
-    skillsH2.textContent       = data[defaultLang].skillsH2_;
-    //portfolio section
-    portfolioH2.textContent    = data[defaultLang].portfolioH2_;
-    portfolioH3_1.textContent  = data[defaultLang].portfolioH3_1_;
-    portfolioH3_2.textContent  = data[defaultLang].portfolioH3_2_;
-    portfolioH3_3.textContent  = data[defaultLang].portfolioH3_3_;
-    portfolioH3_4.textContent  = data[defaultLang].portfolioH3_4_;
-    portfolioH3_5.textContent  = data[defaultLang].portfolioH3_5_;
-    portfolioH3_6.textContent  = data[defaultLang].portfolioH3_6_;
-    portfolioH3_7.textContent  = data[defaultLang].portfolioH3_7_;
-    portfolioH3_8.textContent  = data[defaultLang].portfolioH3_8_;
-    portfolioH3_9.textContent  = data[defaultLang].portfolioH3_9_;
-    portfolioH3_10.textContent = data[defaultLang].portfolioH3_10_;
-    portfolioH3_11.textContent = data[defaultLang].portfolioH3_11_;
-    portfolioH3_12.textContent = data[defaultLang].portfolioH3_12_;
-
-    portfolioP_1.textContent   = data[defaultLang].portfolioP_1_;
-    portfolioP_2.textContent   = data[defaultLang].portfolioP_2_;
-    portfolioP_3.textContent   = data[defaultLang].portfolioP_3_;
-    portfolioP_4.textContent   = data[defaultLang].portfolioP_4_;
-    portfolioP_5.textContent   = data[defaultLang].portfolioP_5_;
-    portfolioP_6.textContent   = data[defaultLang].portfolioP_6_;
-    portfolioP_7.textContent   = data[defaultLang].portfolioP_7_;
-    portfolioP_8.textContent   = data[defaultLang].portfolioP_8_;
-    portfolioP_9.textContent   = data[defaultLang].portfolioP_9_;
-    portfolioP_10.textContent  = data[defaultLang].portfolioP_10_;
-    portfolioP_11.textContent  = data[defaultLang].portfolioP_11_;
-    portfolioP_12.textContent  = data[defaultLang].portfolioP_12_;
-    //videos section
-    videosH2.textContent       = data[defaultLang].videosH2_;
-    //games section
-    gamesH2.textContent        = data[defaultLang].gamesH2_;
-    //contacts section
-    contactsH2.textContent     = data[defaultLang].contactsH2_;
-    contactsBtn.textContent    = data[defaultLang].contactsBtn_;
-    //Location section
-    locationH3.textContent     = data[defaultLang].locationH3_;
-    //social links section
-    aboutWebsite.textContent   = data[defaultLang].aboutWebsite_;
-    // finally, set the correct toggle‐button label
-    updateThemeToggleText();
-  })
-  .catch(err => console.error('Failed to load translations:', err));
-/*because this site got "iframe bomb" issue, thanks to almost 20
-browser games, each of them try to "create" new instanse of browser
-it becames way too RAM consuming and leads to latency and even to
-stuck in loading process forever. So this part of code loads game
-only by requst only.*/
+// ============================= GAME LOADER =============================
 function activateGame(element) {
     const gameUrl = element.getAttribute('data-src');
-    
-    // Create the iframe string
     const iframeHtml = `
         <iframe src="${gameUrl}" 
                 allowtransparency="true" 
@@ -232,45 +169,40 @@ function activateGame(element) {
                 frameborder="0" scrolling="no" 
                 allowfullscreen>
         </iframe>`;
-    
-    // Replace the placeholder content with the iframe
     element.innerHTML = iframeHtml;
-    
-    // Remove the click event so it doesn't reload if clicked again
     element.onclick = null;
 }
-//========================= connect JS to ASP.NET Core =============================
-document.querySelector('.contact-form').addEventListener('submit', async function(e) 
-{
+
+// ============================= CONTACT FORM =============================
+document.querySelector('.contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const name = document.querySelector('.contact-form input[type="text"]').value;
-    const email = document.querySelector('.contact-form input[type="email"]').value;
+    const name    = document.querySelector('.contact-form input[type="text"]').value;
+    const email   = document.querySelector('.contact-form input[type="email"]').value;
     const message = document.querySelector('.contact-form textarea').value;
-    try{
+    try {
         const response = await fetch('/api/contact', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({name,email,message})
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
         });
-        const result = await response.json();
-        if(response.ok){
+        if (response.ok) {
             alert('Message sent successfully!');
             e.target.reset();
         } else {
             alert('Something went wrong. Please try again.');
         }
-    }
-    catch(err){
+    } catch (err) {
         alert('Could not connect to server.');
         console.error(err);
     }
 });
-//=============== Visitor Counter =========================
+
+// ============================= VISITOR COUNTER =============================
 fetch('/api/visitor')
     .then(res => res.json())
     .then(data => {
-        console.log('Total visits:', data.visits);
-        //show on a page somewhere
-        document.querySelector('.visits').textContent = `Баруулар: | Визиты: | Visits: ${data.visits}`;
+        document.querySelector('.visits').textContent =
+            `Баруулар: | Визиты: | Visits: ${data.visits}`;
     })
     .catch(err => console.error('Visitor counter error:', err));
+});

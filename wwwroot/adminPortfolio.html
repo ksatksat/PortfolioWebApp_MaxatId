@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Portfolio</title>
+    <link rel="stylesheet" href="adminstyle.css">
+</head>
+
+<body>
+
+    <!-- LOGIN BOX -->
+    <div id="login-box">
+        <h2>🔒 Admin Login</h2>
+        <input type="password" id="password-input" placeholder="Enter admin password"
+            onkeydown="if(event.key==='Enter') login()">
+        <button onclick="login()">Enter</button>
+        <p id="login-error">Wrong password. Try again.</p>
+    </div>
+
+    <!-- PORTFOLIO PANEL (hidden until login) -->
+    <div id="portfolio-panel">
+
+        <div class="top-bar">
+            <h2>🖼️ Manage Portfolio</h2>
+            <div class="top-bar-actions">
+                <a href="/admin" class="nav-btn">📬 Messages</a>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <!-- CREATE NEW ITEM FORM -->
+        <div class="form-box">
+            <h3 id="form-title">➕ Add New Item</h3>
+            <input type="hidden" id="edit-id">
+
+            <!-- English -->
+            <div class="lang-group">
+                <div class="lang-label">🇬🇧 English</div>
+                <input type="text" id="input-title" placeholder="Title (English)" />
+                <input type="text" id="input-description" placeholder="Description (English)" />
+            </div>
+
+            <!-- Kyrgyz -->
+            <div class="lang-group">
+                <div class="lang-label">🇰🇬 Kyrgyz</div>
+                <input type="text" id="input-titleKy" placeholder="Title (Kyrgyz)" />
+                <input type="text" id="input-descriptionKy" placeholder="Description (Kyrgyz)" />
+            </div>
+
+            <!-- Russian -->
+            <div class="lang-group">
+                <div class="lang-label">🇷🇺 Russian</div>
+                <input type="text" id="input-titleRu" placeholder="Title (Russian)" />
+                <input type="text" id="input-descriptionRu" placeholder="Description (Russian)" />
+            </div>
+
+            <!-- Common fields -->
+            <div class="lang-group">
+                <div class="lang-label">⚙️ General</div>
+                <input type="text" id="input-category" placeholder="Category (e.g. game, web, 3d)" />
+                <input type="text" id="input-imageUrl" placeholder="Image URL" />
+                <input type="text" id="input-projectUrl" placeholder="Project URL" />
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-save" onclick="saveItem()">💾 Save</button>
+                <button class="btn-cancel" id="cancel-btn" onclick="cancelEdit()" style="display:none;">✖
+                    Cancel</button>
+            </div>
+        </div>
+
+        <!-- PORTFOLIO ITEMS LIST -->
+        <div id="loading">Loading portfolio items...</div>
+        <div id="portfolio-list"></div>
+
+    </div>
+
+    <script src="adminPortfolio.js" defer></script>
+</body>
+
+</html>

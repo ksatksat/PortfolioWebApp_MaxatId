@@ -159,19 +159,7 @@ fetch('/data.json')
     })
     .catch(err => console.error('Failed to load translations:', err));
 
-// ============================= GAME LOADER =============================
-function activateGame(element) {
-    const gameUrl = element.getAttribute('data-src');
-    const iframeHtml = `
-        <iframe src="${gameUrl}" 
-                allowtransparency="true" 
-                width="485" height="402" 
-                frameborder="0" scrolling="no" 
-                allowfullscreen>
-        </iframe>`;
-    element.innerHTML = iframeHtml;
-    element.onclick = null;
-}
+
 
 // ============================= CONTACT FORM =============================
 document.querySelector('.contact-form').addEventListener('submit', async function(e) {
@@ -206,3 +194,17 @@ fetch('/api/visitor')
     })
     .catch(err => console.error('Visitor counter error:', err));
 });
+
+// ============================= GAME LOADER =============================
+function activateGame(element) {
+    const gameUrl = element.getAttribute('data-src');
+    const iframeHtml = `
+        <iframe src="${gameUrl}" 
+                allowtransparency="true" 
+                width="485" height="402" 
+                frameborder="0" scrolling="no" 
+                allowfullscreen>
+        </iframe>`;
+    element.innerHTML = iframeHtml;
+    element.onclick = null;
+}

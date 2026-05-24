@@ -24,10 +24,10 @@ build/
 *.db-wal
 
 # --- Environment Secrets ---
+appsettings.json
 appsettings.Development.json
 
 # --- OS Specific ---
 .DS_Store
 Thumbs.db
 ```
-

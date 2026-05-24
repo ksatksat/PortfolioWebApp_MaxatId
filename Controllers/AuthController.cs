@@ -3,7 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using PortfolioAPI.Data;
-
+// wanna read explanation to this code? follow this link:
+//https://docs.google.com/document/d/1h0eGQOIEkUZnbhk2kMLVMn2sfat3E7rp3srI3rHfGMQ/edit?tab=t.0
 namespace PortfolioAPI.Controllers
 {
     [ApiController]
@@ -11,11 +12,13 @@ namespace PortfolioAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly AppDbContext _db;
-        private const string JwtKey = "xK9#mP2$vL7@nQ4&wR6!yT3^uJ8&r#)1";//your-super-secret-key-change-this-to-something-long
+        private readonly string _jwtKey;
 
-        public AuthController(AppDbContext db)
+        public AuthController(AppDbContext db, IConfiguration configuration)
         {
             _db = db;
+            _jwtKey = configuration["JwtKey"]
+                ?? throw new Exception("JwtKey not configured!");
         }
 
         // POST /api/auth/login
@@ -30,7 +33,7 @@ namespace PortfolioAPI.Controllers
 
             // Generate JWT token
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(JwtKey);
+            var key = Encoding.UTF8.GetBytes(_jwtKey);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Expires = DateTime.UtcNow.AddHours(8),
@@ -42,20 +45,6 @@ namespace PortfolioAPI.Controllers
             var tokenString = tokenHandler.WriteToken(token);
 
             return Ok(new { token = tokenString });
-        }
-
-        // POST /api/auth/setup  <-- run this ONCE to create your admin password
-        [HttpPost("setup")]
-        public async Task<IActionResult> Setup([FromBody] LoginRequest request)
-        {
-            var existing = await _db.AdminUsers.FindAsync(1);
-            if (existing != null) return BadRequest("Admin already exists.");
-
-            var hashed = BCrypt.Net.BCrypt.HashPassword(request.Password);
-            _db.AdminUsers.Add(new PortfolioAPI.Models.AdminUser { PasswordHash = hashed });
-            await _db.SaveChangesAsync();
-
-            return Ok("Admin created successfully.");
         }
     }
 

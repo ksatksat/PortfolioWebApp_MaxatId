@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using PortfolioAPI.Data;
-
+//wanna know how this works? read the explanation here:
+//https://docs.google.com/document/d/1L1R4LVR6dbn6axGIvDDruNFgS44OEVws0AiNEt6vwXo/edit?tab=t.0
 namespace PortfolioAPI.Controllers
 {
     [ApiController]
